@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-devanagari-heading {
+    font-family: 'Rozha One', 'Noto Serif Devanagari', serif;
+  }
+  .font-devanagari-body {
+    font-family: 'Noto Serif Devanagari', serif;
+  }
+  .font-cinzel {
+    font-family: 'Cinzel', 'Marcellus', serif;
+  }
+  .font-marcellus {
+    font-family: 'Marcellus', serif;
+  }
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .perspective-1500 {
+    perspective: 1500px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
+
+@keyframes diya-glow {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+    opacity: 0.92;
+  }
+  50% {
+    transform: scale(1.06) translateY(-1px);
+    opacity: 1;
+  }
+}
+
+@keyframes divine-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.03);
+  }
+}
+
+@keyframes gold-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-diya {
+  animation: diya-glow 2.4s ease-in-out infinite alternate;
+}
+
+.animate-diya-delayed {
+  animation: diya-glow 2.8s ease-in-out 0.6s infinite alternate;
+}
+
+.animate-divine-aura {
+  animation: divine-pulse 4s ease-in-out infinite;
+}
+
+.gold-foil-text {
+  background: linear-gradient(135deg, #B45309 0%, #D97706 20%, #FBBF24 45%, #F59E0B 65%, #B45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-border {
+  background: linear-gradient(135deg, #D97706, #FDE68A, #D97706, #78350F);
+}
+
+.marigold-gradient-border {
+  background: linear-gradient(135deg, #EA580C, #FBBF24, #DC2626, #F59E0B);
+}
